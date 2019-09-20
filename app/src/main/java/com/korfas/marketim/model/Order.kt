@@ -2,7 +2,7 @@ package com.korfas.marketim.model
 
 import com.google.gson.annotations.SerializedName
 
-abstract class Order {
+class Order {
 
     @SerializedName("productDetail")
     var productDetail: ProductDetail? = null

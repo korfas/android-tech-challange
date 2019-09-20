@@ -7,5 +7,23 @@
     <string name="act_login_remember_me">Beni Hatırla</string>
     <string name="act_login_button_text">Giriş</string>
 
+    <string name="act_orders_product_price">%1$.2fTL</string>
+
+    <string name="product_state_preparing">Hazırlanıyor</string>
+    <string name="product_state_confirmation">Onay Bekliyor</string>
+    <string name="product_state_delivering">Yolda</string>
+
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
 
 </resources>

@@ -5,4 +5,8 @@
     <color name="colorAccent">#000000</color>
 
     <color name="grey">#A8A8A8</color>
+    
+    <color name="colorProductStatePreparing">#FF8D02</color>
+    <color name="colorProductStateConfirmation">@color/colorPrimary</color>
+    <color name="colorProductStateDelivering">#4DAE50</color>
 </resources>

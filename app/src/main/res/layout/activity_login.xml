@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/gdl_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="true"
+        android:text="@string/app_name_text_all_caps"/>
+
+    <EditText
+        android:id="@+id/usernameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toTopOf="@id/gdl_center_hor"
+        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
+        app:layout_constraintRight_toRightOf="@id/gdl_right"
+        android:padding="16dp"
+        android:drawablePadding="8dp"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_username"
+        android:hint="@string/act_login_username"
+        android:background="@drawable/login_edittext_background"/>
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEt"
+        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
+        app:layout_constraintRight_toRightOf="@id/gdl_right"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:drawablePadding="8dp"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_password"
+        android:hint="@string/act_login_password"
+        android:background="@drawable/login_edittext_background"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/rememberMeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEt"
+        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
+        android:layout_marginTop="16dp"
+        app:trackTint="@android:color/transparent"
+        app:thumbTint="@color/colorAccent"
+        android:background="@drawable/login_switch_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/rememberMeSwitch"
+        app:layout_constraintBottom_toBottomOf="@+id/rememberMeSwitch"
+        app:layout_constraintLeft_toRightOf="@+id/rememberMeSwitch"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/act_login_remember_me"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rememberMeSwitch"
+        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
+        app:layout_constraintRight_toRightOf="@+id/gdl_right"
+        android:layout_marginTop="36dp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:text="@string/act_login_button_text"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_red_background"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_center_hor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".05"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

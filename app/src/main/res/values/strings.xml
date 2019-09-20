@@ -2,7 +2,6 @@
     <string name="app_name">Marketim</string>
     <string name="app_name_text_all_caps">MARKETİM</string>
 
-
     <string name="act_login_username">Kullanıcı Adı</string>
     <string name="act_login_password">Şifre</string>
     <string name="act_login_remember_me">Beni Hatırla</string>

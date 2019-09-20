@@ -1,5 +1,6 @@
 package com.korfas.marketim.activity
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,5 +15,9 @@ class LoginActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         actionBar?.hide()
         setContentView(R.layout.activity_login)
+    }
+
+    fun loginButtonClicked(view: View){
+        startActivity(Intent(this, OrdersActivity::class.java))
     }
 }

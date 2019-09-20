@@ -85,7 +85,8 @@
         android:textAllCaps="false"
         android:text="@string/act_login_button_text"
         android:textColor="@android:color/white"
-        android:background="@drawable/button_red_background"/>
+        android:background="@drawable/button_red_background"
+        android:onClick="loginButtonClicked"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gdl_top"

@@ -84,7 +84,7 @@
         app:layout_constraintTop_toTopOf="@+id/marketNameTv"
         app:layout_constraintBottom_toBottomOf="@id/marketNameTv"
         app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/ic_expansion_arrow" />
+        app:srcCompat="@drawable/ic_expansion_arrow_right" />
 
     <TextView
         android:id="@+id/productPriceTv"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toTopOf="@+id/orderNameTv"
         app:layout_constraintRight_toRightOf="parent"
         android:textStyle="bold"
-        android:text="25TL"/>
+        tools:text="25TL"/>
 
 
 

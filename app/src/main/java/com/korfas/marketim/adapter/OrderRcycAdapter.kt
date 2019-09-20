@@ -1,5 +1,7 @@
 package com.korfas.marketim.adapter
 
+import android.graphics.drawable.Animatable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -62,10 +64,6 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
 
         }
 
-        holder.itemView.setOnClickListener({
-
-        })
-
         holder.dateTv.text = order.date
         holder.monthTv.text =
             holder.context.resources.getStringArray(R.array.months)[Integer.valueOf(order.month?.toInt()!! - 1)]
@@ -77,6 +75,27 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
 
         holder.productStateCard.setCardBackgroundColor(stateColor)
         holder.productStateTv.setTextColor(stateColor)
+
+        var expanded = false
+
+
+        holder.itemView.setOnClickListener {
+
+            val drawableResource =
+                if (expanded) R.drawable.ic_expansion_arrow_bottom else R.drawable.ic_expansion_arrow_right
+
+            holder.expansionArrowImgv.setImageDrawable(
+                ContextCompat.getDrawable(
+                    holder.context,
+                    drawableResource
+                )
+            )
+            val animatable = holder.expansionArrowImgv.drawable as Animatable
+            animatable.start()
+
+            expanded = !expanded;
+
+        }
     }
 
 

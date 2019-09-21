@@ -93,15 +93,15 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
          */
         val stateColor = when (order.productState?.trim()?.toLowerCase(Locale.getDefault())) {
 
-            holder.context.getString(R.string.product_state_preparing).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
+            holder.context.getString(R.string.product_state_preparing_key).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
                 holder.context,
                 R.color.colorProductStatePreparing
             )
-            holder.context.getString(R.string.product_state_confirmation).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
+            holder.context.getString(R.string.product_state_confirmation_key).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
                 holder.context,
                 R.color.colorProductStateConfirmation
             )
-            holder.context.getString(R.string.product_state_delivering).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
+            holder.context.getString(R.string.product_state_delivering_key).trim().toLowerCase(Locale.getDefault()) -> ContextCompat.getColor(
                 holder.context,
                 R.color.colorProductStateDelivering
             )

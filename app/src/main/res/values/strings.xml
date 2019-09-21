@@ -2,8 +2,8 @@
     <string name="app_name">Marketim</string>
     <string name="app_name_text_all_caps">MARKETİM</string>
 
-    <string name="username_key">kariyer</string>
-    <string name="password_key">2019ADev</string>
+    <string name="username_key" translatable="false">kariyer</string>
+    <string name="password_key" translatable="false">2019ADev</string>
 
     <string name="act_login_username">Kullanıcı Adı</string>
     <string name="act_login_password">Şifre</string>
@@ -11,7 +11,7 @@
     <string name="act_login_button_text">Giriş</string>
     <string name="act_login_error_message">Kullanıcı adı veya şifre hatalı, lütfen tekrar deneyiniz</string>
 
-    <string name="act_orders_product_price">%1$.2fTL</string>
+    <string name="act_orders_product_price">%1$.2f \u20BA</string>
     <string name="act_orders_my_orders">Siparişlerim</string>
     <string name="act_orders_logout">Çıkış Yap</string>
     <string name="act_orders_logout_dialog_title">Çıkış Yap</string>
@@ -19,6 +19,10 @@
     <string name="act_orders_logout_dialog_confirm">İstiyorum</string>
     <string name="act_orders_logout_dialog_cancel">İptal</string>
     <string name="act_orders_expansion_arrow_image_description">Ürün detayı</string>
+
+    <string name="product_state_preparing_key" translatable="false">Hazırlanıyor</string>
+    <string name="product_state_confirmation_key" translatable="false">Onay Bekliyor</string>
+    <string name="product_state_delivering_key" translatable="false">Yolda</string>
 
     <string name="product_state_preparing">Hazırlanıyor</string>
     <string name="product_state_confirmation">Onay Bekliyor</string>

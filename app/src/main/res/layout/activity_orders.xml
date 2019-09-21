@@ -41,6 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/orders_logout_button_background"
+        android:onClick="logout"
         android:text="@string/act_orders_logout"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

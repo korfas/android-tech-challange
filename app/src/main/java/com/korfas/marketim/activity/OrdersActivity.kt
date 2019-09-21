@@ -1,10 +1,14 @@
 package com.korfas.marketim.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.korfas.marketim.R
@@ -62,5 +66,18 @@ class OrdersActivity : AppCompatActivity() {
 
 
         })
+    }
+
+    fun logout(view: View) {
+
+        AlertDialog.Builder(this).setTitle(getString(R.string.act_orders_logout_dialog_title))
+            .setMessage(R.string.act_orders_logout_dialog_content)
+            .setPositiveButton(R.string.act_orders_logout_dialog_confirm) { dialog, id ->
+                PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("remember", false).apply()
+                startActivity(Intent(this, LoginActivity::class.java))
+            }.setNegativeButton(R.string.act_orders_logout_dialog_cancel) { dialog, id ->
+                dialog.cancel()
+            }.show()
+
     }
 }

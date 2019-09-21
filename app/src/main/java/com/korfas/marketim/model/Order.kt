@@ -2,6 +2,12 @@ package com.korfas.marketim.model
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Listeden seçilen her bir siparişin atanacağı sipariş modeli
+ * Retrofit, çekilen JSON verisinde  "@SerializedName" içerinde yer alan değerleri alıp ilgili özelliğe atacaktır.
+ * Böylece çekilen JSON dizisi, Retrofit tarafından otomatik olarak sipariş listesine dönüştürülecektir.
+ */
+
 class Order {
 
     @SerializedName("productDetail")

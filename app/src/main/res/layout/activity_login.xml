@@ -35,7 +35,7 @@
         android:textSize="@dimen/act_login_edittext_text_size"
         android:drawableStart="@drawable/ic_username"
         android:hint="@string/act_login_username"
-        android:background="@drawable/login_edittext_background"/>
+        android:background="@drawable/act_login_edittext_background"/>
 
     <EditText
         android:id="@+id/passwordEt"
@@ -52,7 +52,7 @@
         android:textSize="@dimen/act_login_edittext_text_size"
         android:drawableStart="@drawable/ic_password"
         android:hint="@string/act_login_password"
-        android:background="@drawable/login_edittext_background"/>
+        android:background="@drawable/act_login_edittext_background"/>
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/rememberMeSwitch"
@@ -63,7 +63,7 @@
         android:layout_marginTop="@dimen/act_login_switch_margin_top"
         app:trackTint="@android:color/transparent"
         app:thumbTint="@color/colorAccent"
-        android:background="@drawable/login_switch_background"/>
+        android:background="@drawable/act_login_switch_background"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
         android:textAllCaps="false"
         android:text="@string/act_login_button_text"
         android:textColor="@android:color/white"
-        android:background="@drawable/button_red_background"
+        android:background="@drawable/act_login_button_background"
         android:onClick="loginButtonClicked"/>
 
     <androidx.constraintlayout.widget.Guideline

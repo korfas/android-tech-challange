@@ -16,10 +16,14 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        actionBar?.hide()
         setContentView(R.layout.activity_login)
 
+        /**
+         * Hafızadaki "remember" alanını kontrol et.
+         * Eğer daha önce "Beni Hatırla" seçeneği seçilerek giriş yapılmışsa, "remember" değeri "true" dönecektir.
+         * Eğer dönen değer "true" ise doğrudan "Siparişlerim" sayfasına yönlendir.
+         * Eğer dönen değer "false" ise yönlendirme yapma, "Giriş" sayfasında kal.
+         */
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("remember", false)) {
             startActivity(Intent(this, OrdersActivity::class.java))
         }
@@ -27,13 +31,28 @@ class LoginActivity : AppCompatActivity() {
 
     fun loginButtonClicked(view: View) {
 
+        /**
+         * Giriş butonu tıkandığında, girilen verileri kontrol et
+         */
+
         if (usernameEt.text.toString().trim().equals(getString(R.string.username_key)) &&
             passwordEt.text.toString().trim().equals(getString(R.string.password_key))
         ) {
+
+            /**
+             * Eğer girilen kullanıcı adı ve şifre doğruysa, "Beni Hatırla" butonunu kontrol et.
+             * Eğer hatırlama işlevi seçiliyse, hafızadaki "remember" alanına "true" değeri atanır.
+             * Eğer hatırlama işlevi seçili değilse hafızadaki "remember" alanına "false" değeri atanır.
+             */
             PreferenceManager.getDefaultSharedPreferences(this).edit()
                 .putBoolean("remember", rememberMeSwitch.isChecked).apply();
             startActivity(Intent(this, OrdersActivity::class.java))
         } else {
+
+            /**
+             * Eğer girilen kullanıcı adı ve şifre yanlışsa hata mesajı içeren Snackbar göster.
+             */
+
             showErrorSnackbar()
         }
     }
@@ -44,6 +63,11 @@ class LoginActivity : AppCompatActivity() {
             getString(R.string.act_login_error_message),
             Snackbar.LENGTH_SHORT
         )
+
+        /**
+         * Snackbar'ın yazı rengi varayılan olarak siyah olduğu için koyu gri arka planda iyi gözükmüyor.
+         * Snackbar içindeki TextView'i bir değişkene ata ve yazı rengini beyaz yap.
+         */
         val snackbarTextView =
             snackbar.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
         snackbarTextView.setTextColor(ContextCompat.getColor(this, android.R.color.white))

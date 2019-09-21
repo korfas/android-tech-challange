@@ -2,7 +2,6 @@ package com.korfas.marketim.adapter
 
 import android.content.Context
 import android.graphics.drawable.Animatable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,9 +13,7 @@ import com.korfas.marketim.model.Order
 import kotlinx.android.synthetic.main.activity_orders_rcyc_model.view.*
 import java.util.*
 import kotlin.collections.ArrayList
-import android.opengl.ETC1.getWidth
 import android.view.animation.Animation
-import android.view.animation.TranslateAnimation
 import android.view.animation.ScaleAnimation
 
 

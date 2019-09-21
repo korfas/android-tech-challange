@@ -13,43 +13,43 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/gdl_top"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="@+id/gdlTopActLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/act_login_title_text_size"
         android:textColor="@color/colorPrimary"
         android:textAllCaps="true"
         android:text="@string/app_name_text_all_caps"/>
 
     <EditText
         android:id="@+id/usernameEt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:importantForAutofill="no"
-        app:layout_constraintTop_toTopOf="@id/gdl_center_hor"
-        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
-        app:layout_constraintRight_toRightOf="@id/gdl_right"
-        android:padding="16dp"
-        android:drawablePadding="8dp"
-        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/gdlCenterHorActLogin"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftActLogin"
+        app:layout_constraintEnd_toEndOf="@id/gdlRightActLogin"
+        android:padding="@dimen/act_login_edittext_padding"
+        android:drawablePadding="@dimen/act_login_edittext_drawable_padding"
+        android:textSize="@dimen/act_login_edittext_text_size"
         android:drawableStart="@drawable/ic_username"
         android:hint="@string/act_login_username"
         android:background="@drawable/login_edittext_background"/>
 
     <EditText
         android:id="@+id/passwordEt"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:importantForAutofill="no"
         app:layout_constraintTop_toBottomOf="@+id/usernameEt"
-        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
-        app:layout_constraintRight_toRightOf="@id/gdl_right"
-        android:layout_marginTop="16dp"
-        android:padding="16dp"
-        android:drawablePadding="8dp"
-        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftActLogin"
+        app:layout_constraintEnd_toEndOf="@id/gdlRightActLogin"
+        android:layout_marginTop="@dimen/act_login_password_edittext_margin_top"
+        android:padding="@dimen/act_login_edittext_padding"
+        android:drawablePadding="@dimen/act_login_edittext_drawable_padding"
+        android:textSize="@dimen/act_login_edittext_text_size"
         android:drawableStart="@drawable/ic_password"
         android:hint="@string/act_login_password"
         android:background="@drawable/login_edittext_background"/>
@@ -59,8 +59,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/passwordEt"
-        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
-        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftActLogin"
+        android:layout_marginTop="@dimen/act_login_switch_margin_top"
         app:trackTint="@android:color/transparent"
         app:thumbTint="@color/colorAccent"
         android:background="@drawable/login_switch_background"/>
@@ -70,20 +70,20 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/rememberMeSwitch"
         app:layout_constraintBottom_toBottomOf="@+id/rememberMeSwitch"
-        app:layout_constraintLeft_toRightOf="@+id/rememberMeSwitch"
-        android:layout_marginStart="16dp"
-        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/rememberMeSwitch"
+        android:layout_marginStart="@dimen/act_login_remember_me_text_margin_start"
+        android:textSize="@dimen/act_login_remember_me_text_size"
         android:textColor="@color/colorAccent"
         android:text="@string/act_login_remember_me"/>
 
     <Button
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/rememberMeSwitch"
-        app:layout_constraintLeft_toLeftOf="@+id/gdl_left"
-        app:layout_constraintRight_toRightOf="@+id/gdl_right"
-        android:layout_marginTop="36dp"
-        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftActLogin"
+        app:layout_constraintEnd_toEndOf="@+id/gdlRightActLogin"
+        android:layout_marginTop="@dimen/act_login_button_margin_top"
+        android:textSize="@dimen/act_login_button_text_size"
         android:textAllCaps="false"
         android:text="@string/act_login_button_text"
         android:textColor="@android:color/white"
@@ -91,21 +91,21 @@
         android:onClick="loginButtonClicked"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdl_top"
+        android:id="@+id/gdlTopActLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".1"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdl_center_hor"
+        android:id="@+id/gdlCenterHorActLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent=".4"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdl_left"
+        android:id="@+id/gdlLeftActLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -113,7 +113,7 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gdl_right"
+        android:id="@+id/gdlRightActLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

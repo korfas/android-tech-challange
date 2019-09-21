@@ -9,8 +9,8 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/ordersSwpLay"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="@dimen/zero"
+        android:layout_marginBottom="@dimen/act_orders_swipe_refresh_layout_margin_bottom"
         app:layout_constraintBottom_toTopOf="@+id/myOrdersBtn"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,9 +25,9 @@
 
     <Button
         android:id="@+id/myOrdersBtn"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/act_orders_buttons_margin_bottom"
         android:background="@drawable/orders_my_orders_button_background"
         android:text="@string/act_orders_my_orders"
         android:textAllCaps="false"
@@ -38,7 +38,7 @@
 
     <Button
         android:id="@+id/logoutBtn"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:background="@drawable/orders_logout_button_background"
         android:onClick="logout"

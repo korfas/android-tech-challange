@@ -9,13 +9,12 @@
         android:id="@+id/dateTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/act_orders_rcyc_model_margin_start"
+        android:layout_marginTop="@dimen/act_orders_rcyc_model_margin_top"
         android:includeFontPadding="false"
-        android:lineSpacingExtra="0dp"
         android:textColor="@color/colorAccent"
-        android:textSize="40sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="@dimen/act_orders_rcyc_model_date_text_size"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="08" />
 
@@ -23,28 +22,28 @@
         android:id="@+id/monthTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="@+id/dateTv"
-        app:layout_constraintRight_toRightOf="@+id/dateTv"
+        app:layout_constraintStart_toStartOf="@+id/dateTv"
+        app:layout_constraintEnd_toEndOf="@+id/dateTv"
         app:layout_constraintTop_toBottomOf="@+id/dateTv"
         tools:text="Ekim" />
 
     <View
         android:id="@+id/seperationLine"
-        android:layout_width="1dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="@dimen/act_orders_rcyc_model_seperation_line_width"
+        android:layout_height="@dimen/zero"
+        android:layout_marginStart="@dimen/act_orders_rcyc_model_margin_start"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="@+id/productStateCard"
-        app:layout_constraintLeft_toRightOf="@+id/dateTv"
+        app:layout_constraintStart_toEndOf="@+id/dateTv"
         app:layout_constraintTop_toTopOf="@+id/dateTv" />
 
     <TextView
         android:id="@+id/marketNameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/act_orders_rcyc_model_market_name_margin_start"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/seperationLine"
+        app:layout_constraintStart_toEndOf="@+id/seperationLine"
         app:layout_constraintTop_toTopOf="@+id/dateTv"
         tools:text="Market 1" />
 
@@ -52,41 +51,42 @@
         android:id="@+id/orderNameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/act_orders_rcyc_model_order_name_margin_top"
         android:ellipsize="end"
         android:maxLines="1"
-        app:layout_constraintLeft_toLeftOf="@+id/marketNameTv"
+        app:layout_constraintStart_toStartOf="@+id/marketNameTv"
         app:layout_constraintTop_toBottomOf="@+id/marketNameTv"
         tools:text="Sabun" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/productStateCard"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="@dimen/act_orders_rcyc_model_product_state_card_width"
+        android:layout_height="@dimen/act_orders_rcyc_model_product_state_card_height"
+        android:layout_marginTop="@dimen/act_orders_rcyc_model_product_state_card_margin_top"
         app:cardBackgroundColor="@color/colorProductStatePreparing"
-        app:layout_constraintLeft_toLeftOf="@+id/marketNameTv"
+        app:layout_constraintStart_toStartOf="@+id/marketNameTv"
         app:layout_constraintTop_toBottomOf="@+id/orderNameTv" />
 
     <TextView
         android:id="@+id/productStateTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/act_orders_rcyc_model_product_state_tv_margin_start"
         app:layout_constraintBottom_toBottomOf="@+id/productStateCard"
-        app:layout_constraintLeft_toRightOf="@+id/productStateCard"
+        app:layout_constraintStart_toEndOf="@+id/productStateCard"
         app:layout_constraintTop_toTopOf="@+id/productStateCard"
         tools:text="Hazırlanıyor" />
 
     <ImageView
         android:id="@+id/expansionArrowImgv"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="@dimen/zero"
+        android:layout_marginEnd="@dimen/act_orders_rcyc_model_expansion_arrow_margin_end"
         app:layout_constraintBottom_toBottomOf="@id/marketNameTv"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/marketNameTv"
-        app:srcCompat="@drawable/ic_expansion_arrow_right" />
+        app:srcCompat="@drawable/ic_expansion_arrow_right"
+        android:contentDescription="@string/act_orders_expansion_arrow_image_description"/>
 
 
     <TextView
@@ -101,7 +101,7 @@
     <View
         android:id="@+id/productDetailBackgroundView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero"
         android:background="@color/colorProductDetailBackground"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/productDetailConstLay"
@@ -109,11 +109,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/productDetailConstLay"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
+        android:layout_marginTop="@dimen/act_orders_rcyc_model_product_detail_const_lay_margin_top"
+        android:paddingTop="@dimen/act_orders_rcyc_model_product_detail_const_lay_padding_top"
+        android:paddingBottom="@dimen/act_orders_rcyc_model_product_detail_const_lay_padding_bottom"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/expansionArrowImgv"
         app:layout_constraintStart_toStartOf="@+id/marketNameTv"
@@ -139,9 +139,9 @@
 
         <View
             android:id="@+id/productDetailUnderlineView"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/act_orders_rcyc_model_product_detail_underline_height"
+            android:layout_marginTop="@dimen/act_orders_rcyc_model_product_detail_underline_margin_top"
             android:background="@color/grey"
             app:layout_constraintEnd_toEndOf="@+id/summaryPriceTv"
             app:layout_constraintStart_toStartOf="@+id/orderDetailTv"

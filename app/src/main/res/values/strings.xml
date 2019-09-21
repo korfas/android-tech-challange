@@ -18,6 +18,7 @@
     <string name="act_orders_logout_dialog_content">Çıkış yapmak istiyor musunuz?</string>
     <string name="act_orders_logout_dialog_confirm">İstiyorum</string>
     <string name="act_orders_logout_dialog_cancel">İptal</string>
+    <string name="act_orders_expansion_arrow_image_description">Ürün detayı</string>
 
     <string name="product_state_preparing">Hazırlanıyor</string>
     <string name="product_state_confirmation">Onay Bekliyor</string>

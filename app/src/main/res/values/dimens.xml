@@ -3,4 +3,38 @@
 
     <dimen name="icon_size">16dp</dimen>
 
+    <dimen name="zero">0dp</dimen>
+
+    <dimen name="act_login_title_text_size">36sp</dimen>
+    <dimen name="act_login_edittext_padding">16dp</dimen>
+    <dimen name="act_login_edittext_drawable_padding">8dp</dimen>
+    <dimen name="act_login_edittext_text_size">14sp</dimen>
+    <dimen name="act_login_password_edittext_margin_top">16dp</dimen>
+    <dimen name="act_login_switch_margin_top">16dp</dimen>
+    <dimen name="act_login_remember_me_text_margin_start">16dp</dimen>
+    <dimen name="act_login_remember_me_text_size">16sp</dimen>
+    <dimen name="act_login_button_margin_top">36dp</dimen>
+    <dimen name="act_login_button_text_size">16sp</dimen>
+
+    <dimen name="act_orders_swipe_refresh_layout_margin_bottom">16dp</dimen>
+    <dimen name="act_orders_buttons_margin_bottom">16dp</dimen>
+
+    <dimen name="act_orders_rcyc_model_margin_top">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_margin_start">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_date_text_size">40sp</dimen>
+    <dimen name="act_orders_rcyc_model_seperation_line_width">1dp</dimen>
+    <dimen name="act_orders_rcyc_model_seperation_line_margin_start">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_market_name_margin_start">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_order_name_margin_top">8dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_state_card_margin_top">8dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_state_card_width">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_state_card_height">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_state_tv_margin_start">8dp</dimen>
+    <dimen name="act_orders_rcyc_model_expansion_arrow_margin_end">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_detail_const_lay_margin_top">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_detail_const_lay_padding_top">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_detail_const_lay_padding_bottom">16dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_detail_underline_height">1dp</dimen>
+    <dimen name="act_orders_rcyc_model_product_detail_underline_margin_top">4dp</dimen>
+
 </resources>

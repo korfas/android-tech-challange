@@ -12,6 +12,8 @@
     <string name="act_login_error_message">Kullanıcı adı veya şifre hatalı, lütfen tekrar deneyiniz</string>
 
     <string name="act_orders_product_price">%1$.2fTL</string>
+    <string name="act_orders_my_orders">Siparişlerim</string>
+    <string name="act_orders_logout">Çıkış Yap</string>
 
     <string name="product_state_preparing">Hazırlanıyor</string>
     <string name="product_state_confirmation">Onay Bekliyor</string>

@@ -6,10 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".activity.OrdersActivity">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ordersRcyc"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/ordersSwpLay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/myOrdersBtn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordersRcyc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <Button
+        android:id="@+id/myOrdersBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/orders_my_orders_button_background"
+        android:text="@string/act_orders_my_orders"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gdlCenterLeftActOrders"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftActOrders" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/orders_logout_button_background"
+        android:text="@string/act_orders_logout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/myOrdersBtn"
+        app:layout_constraintEnd_toEndOf="@+id/gdlRightActOrders"
+        app:layout_constraintStart_toStartOf="@+id/gdlCenterRightActOrders"
+        app:layout_constraintTop_toTopOf="@+id/myOrdersBtn" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlLeftActOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlCenterLeftActOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlCenterRightActOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".53" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlRightActOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".97" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.ActionBar
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.korfas.marketim.R
 import com.korfas.marketim.adapter.OrderRcycAdapter
 import com.korfas.marketim.model.Order
@@ -26,6 +28,21 @@ class OrdersActivity : AppCompatActivity() {
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         ordersRcyc.layoutManager = linearLayoutManager
 
+        setSwipeRefresh()
+        startCall()
+
+    }
+
+    fun setSwipeRefresh() {
+
+        ordersSwpLay.setColorSchemeColors(ContextCompat.getColor(this, R.color.colorPrimary))
+        ordersSwpLay.setRefreshing(true)
+        ordersSwpLay.setOnRefreshListener {
+            startCall()
+        }
+    }
+
+    fun startCall() {
         val apiInterface = ApiClient.client?.create(ApiInterface::class.java)
         val call = apiInterface?.getAllOrders()
 
@@ -36,10 +53,11 @@ class OrdersActivity : AppCompatActivity() {
                 val orders: List<Order>? = response.body();
                 val adapter = OrderRcycAdapter(orders as ArrayList<Order>);
                 ordersRcyc.adapter = adapter
+                ordersSwpLay.isRefreshing = false
             }
 
             override fun onFailure(call: Call<List<Order>>, t: Throwable) {
-                Log.d("!!!!!!!", "" + t.message)
+                ordersSwpLay.isRefreshing = false
             }
 
 

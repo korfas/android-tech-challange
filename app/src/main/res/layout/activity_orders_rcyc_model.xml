@@ -22,8 +22,8 @@
         android:id="@+id/monthTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/dateTv"
         app:layout_constraintEnd_toEndOf="@+id/dateTv"
+        app:layout_constraintStart_toStartOf="@+id/dateTv"
         app:layout_constraintTop_toBottomOf="@+id/dateTv"
         tools:text="Ekim" />
 
@@ -39,21 +39,23 @@
 
     <TextView
         android:id="@+id/marketNameTv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/act_orders_rcyc_model_market_name_margin_start"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/productPriceTv"
         app:layout_constraintStart_toEndOf="@+id/seperationLine"
         app:layout_constraintTop_toTopOf="@+id/dateTv"
         tools:text="Market 1" />
 
     <TextView
         android:id="@+id/orderNameTv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/act_orders_rcyc_model_order_name_margin_top"
         android:ellipsize="end"
         android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@+id/marketNameTv"
         app:layout_constraintStart_toStartOf="@+id/marketNameTv"
         app:layout_constraintTop_toBottomOf="@+id/marketNameTv"
         tools:text="Sabun" />
@@ -82,11 +84,11 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/zero"
         android:layout_marginEnd="@dimen/act_orders_rcyc_model_expansion_arrow_margin_end"
+        android:contentDescription="@string/act_orders_expansion_arrow_image_description"
         app:layout_constraintBottom_toBottomOf="@id/marketNameTv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/marketNameTv"
-        app:srcCompat="@drawable/ic_expansion_arrow_right"
-        android:contentDescription="@string/act_orders_expansion_arrow_image_description"/>
+        app:srcCompat="@drawable/ic_expansion_arrow_right" />
 
 
     <TextView

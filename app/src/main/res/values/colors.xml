@@ -9,4 +9,6 @@
     <color name="colorProductStatePreparing">#FF8D02</color>
     <color name="colorProductStateConfirmation">@color/colorPrimary</color>
     <color name="colorProductStateDelivering">#4DAE50</color>
+
+    <color name="colorProductDetailBackground">#E1E3E4</color>
 </resources>

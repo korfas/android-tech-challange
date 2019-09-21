@@ -13,6 +13,11 @@ import com.korfas.marketim.model.Order
 import kotlinx.android.synthetic.main.activity_orders_rcyc_model.view.*
 import java.util.*
 import kotlin.collections.ArrayList
+import android.opengl.ETC1.getWidth
+import android.view.animation.Animation
+import android.view.animation.TranslateAnimation
+import android.view.animation.ScaleAnimation
+
 
 class OrderRcycAdapter(var orders: ArrayList<Order>) :
     RecyclerView.Adapter<OrderRcycAdapter.OrderViewHolder>() {
@@ -30,6 +35,11 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
         var productStateTv = itemView.productStateTv
         var expansionArrowImgv = itemView.expansionArrowImgv
         var productPriceTv = itemView.productPriceTv
+
+        var productDetailBackgroundView = itemView.productDetailBackgroundView
+        var productDetailConstLay = itemView.productDetailConstLay
+        var orderDetailTv = itemView.orderDetailTv
+        var summaryPriceTv = itemView.summaryPriceTv
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
@@ -73,11 +83,16 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
         holder.productPriceTv.text =
             holder.context.getString(R.string.act_orders_product_price, order.productPrice)
 
+        holder.orderDetailTv.text = order.productDetail?.orderDetail
+        holder.summaryPriceTv.text = holder.context.getString(
+            R.string.act_orders_product_price,
+            order.productDetail?.summaryPrice
+        )
+
         holder.productStateCard.setCardBackgroundColor(stateColor)
         holder.productStateTv.setTextColor(stateColor)
 
         var expanded = false
-
 
         holder.itemView.setOnClickListener {
 
@@ -95,7 +110,32 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
 
             expanded = !expanded;
 
+            startExpandAnimation(holder.productDetailBackgroundView, expanded)
+            startExpandAnimation(holder.productDetailConstLay, expanded)
+
         }
+    }
+
+    fun startExpandAnimation(view: View, expanded: Boolean) {
+        val anim =
+            if (expanded) ScaleAnimation(1f, 1f, 0f, 1f) else ScaleAnimation(1f, 1f, 1f, 0f);
+        anim.duration = 200
+        anim.fillAfter = true
+        view.startAnimation(anim)
+        anim.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation) {
+                if (expanded) view.visibility = View.VISIBLE
+            }
+
+            override fun onAnimationEnd(animation: Animation) {
+                if (!expanded) view.visibility = View.GONE
+            }
+
+            override fun onAnimationRepeat(animation: Animation) {
+
+            }
+        })
+
     }
 
 

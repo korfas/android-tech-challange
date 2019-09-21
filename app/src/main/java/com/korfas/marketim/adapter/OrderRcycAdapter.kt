@@ -1,5 +1,6 @@
 package com.korfas.marketim.adapter
 
+import android.content.Context
 import android.graphics.drawable.Animatable
 import android.util.Log
 import android.view.LayoutInflater
@@ -110,16 +111,15 @@ class OrderRcycAdapter(var orders: ArrayList<Order>) :
 
             expanded = !expanded;
 
-            startExpandAnimation(holder.productDetailBackgroundView, expanded)
-            startExpandAnimation(holder.productDetailConstLay, expanded)
+            startExpandAnimation(holder.context, holder.productDetailBackgroundView, expanded)
+            startExpandAnimation(holder.context, holder.productDetailConstLay, expanded)
 
         }
     }
 
-    fun startExpandAnimation(view: View, expanded: Boolean) {
-        val anim =
-            if (expanded) ScaleAnimation(1f, 1f, 0f, 1f) else ScaleAnimation(1f, 1f, 1f, 0f);
-        anim.duration = 200
+    fun startExpandAnimation(context: Context, view: View, expanded: Boolean) {
+        val anim = if (expanded) ScaleAnimation(1f, 1f, 0f, 1f) else ScaleAnimation(1f, 1f, 1f, 0f);
+        anim.duration = context.resources.getInteger(R.integer.animation_duration).toLong()
         anim.fillAfter = true
         view.startAnimation(anim)
         anim.setAnimationListener(object : Animation.AnimationListener {

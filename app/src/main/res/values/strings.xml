@@ -2,10 +2,14 @@
     <string name="app_name">Marketim</string>
     <string name="app_name_text_all_caps">MARKETİM</string>
 
+    <string name="username_key">a</string>
+    <string name="password_key">b</string>
+
     <string name="act_login_username">Kullanıcı Adı</string>
     <string name="act_login_password">Şifre</string>
     <string name="act_login_remember_me">Beni Hatırla</string>
     <string name="act_login_button_text">Giriş</string>
+    <string name="act_login_error_message">Kullanıcı adı veya şifre hatalı, lütfen tekrar deneyiniz</string>
 
     <string name="act_orders_product_price">%1$.2fTL</string>
 
